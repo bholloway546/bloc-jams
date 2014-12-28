@@ -1,8 +1,17 @@
 $(document).ready(function() { 
-   $('.hero-content h3').click(function(){
+  $('.hero-content h1').hover(function(){
+    $(this).fadeOut(1000);
+  });
+  
+  $('.hero-content h3').click(function(){
       var subText = $(this).text();
       $(this).text(subText + "!");
    });
+  
+   $('.hero-content h3').mouseover(function(){
+     $(this).css("color","red");
+   });
+  
   
    var onHoverAction = function(event) {
      console.log('Hover action triggered.');
@@ -15,4 +24,9 @@ $(document).ready(function() {
    };
  
    $('.selling-points .point').hover(onHoverAction, offHoverAction);
+  
+   $('.selling-points .point').click(function(){
+     $(this).css("color","blue");
+});
+     
 });
