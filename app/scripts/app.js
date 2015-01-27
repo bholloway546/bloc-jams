@@ -24,12 +24,6 @@ blocJams = angular.module('BlocJams', ['ui.router']);
 
 blocJams.config(['$stateProvider', '$locationProvider', function($stateProvider, $locationProvider) {
    $locationProvider.html5Mode(true);
-  
-  $stateProvider.state('collection', {
-     url: '/collection',
-     controller: 'Collection.controller',
-     templateUrl: '/templates/collection.html'
-   });
  
    $stateProvider.state('landing', {
      url: '/',
