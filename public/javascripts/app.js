@@ -286,7 +286,6 @@ var albumPicasso = {
      ]
  };
  
-
 blocJams = angular.module('BlocJams', ['ui.router']);
 
 blocJams.config(['$stateProvider', '$locationProvider', function($stateProvider, $locationProvider) {
@@ -297,9 +296,23 @@ blocJams.config(['$stateProvider', '$locationProvider', function($stateProvider,
      controller: 'Landing.controller',
      templateUrl: '/templates/landing.html'
    });
+  
+   $stateProvider.state('collection', {
+     url: '/collection',
+     controller: 'Collection.controller',
+     templateUrl: '/templates/collection.html'
+   });
+  
  }]);
 
- blocJams.controller('Landing.controller', ['$scope', function($scope) {
+blocJams.controller('Collection.controller', ['$scope', function($scope) {
+   $scope.albums = [];
+   for (var i = 0; i < 33; i++) {
+     $scope.albums.push(angular.copy(albumPicasso));
+   }
+ }]);
+
+blocJams.controller('Landing.controller', ['$scope', function($scope) {
   $scope.subText = "Turn the music up!";
    
    $scope.subTextClicked = function() {
@@ -317,13 +330,7 @@ blocJams.config(['$stateProvider', '$locationProvider', function($stateProvider,
      '/images/album-placeholders/album-8.jpg',
      '/images/album-placeholders/album-9.jpg',
    ];
- }]);
-   
-blocJams.controller('Collection.controller', ['$scope', function($scope) {
-   $scope.albums = [];
-  for (var i = 0; i < 33; i++) {
-     $scope.albums.push(angular.copy(albumPicasso));
-   }
+     
  }]);
 });
 
