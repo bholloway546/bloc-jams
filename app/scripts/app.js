@@ -121,8 +121,6 @@ blocJams.service('SongPlayer', function() {
        }
         var song = this.currentAlbum.songs[currentTrackIndex];
         this.setSong(this.currentAlbum, song);
-       
-        this.currentSong = this.currentAlbum.songs[currentTrackIndex];
      },
    
     previous: function() {
@@ -134,8 +132,6 @@ blocJams.service('SongPlayer', function() {
       
       var song = this.currentAlbum.songs[currentTrackIndex];
       this.setSong(this.currentAlbum, song);
- 
-      this.currentSong = this.currentAlbum.songs[currentTrackIndex];
      },
      
      setSong: function(album, song) {
