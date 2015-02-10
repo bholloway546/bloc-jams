@@ -53,7 +53,7 @@
   display: inline-block;
   width: 28px;
   height: 28px; }
-  .album-song-button :hover {
+  .album-song-button:hover {
     cursor: pointer;
     color: white;
     background-color: #d2287b; }
@@ -108,7 +108,7 @@ td.song-number {
     display: inline-block;
     width: 42px;
     height: 42px; }
-    .collection-album-container .collection-overlay-button :hover {
+    .collection-album-container .collection-overlay-button:hover {
       cursor: pointer;
       color: white;
       background-color: #d2287b; }
